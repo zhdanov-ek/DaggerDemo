@@ -1,4 +1,4 @@
-package com.example.daggerdemo
+package com.example.daggerdemo.di
 
 import com.example.daggerdemo.model.Canon
 import com.example.daggerdemo.model.Printer
@@ -9,7 +9,7 @@ import dagger.Provides
 class CanonModule {
 
     @Provides
-    fun getCanon(): Printer {
+    fun provideCanon(): Printer {
         return Canon()
     }
 }
