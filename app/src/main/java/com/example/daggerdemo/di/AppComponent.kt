@@ -1,11 +1,12 @@
 package com.example.daggerdemo.di
 
-import com.example.daggerdemo.model.PowerAdapter
-import com.example.daggerdemo.model.Printer
+import com.example.daggerdemo.MainActivity
 import dagger.Component
+import javax.inject.Singleton
 
 @Component(modules = [HPModule::class, PowerAdapterModule::class])
+
+@Singleton
 interface AppComponent {
-    fun getPrinter(): Printer
-    fun getPowerAdapter(): PowerAdapter
+    fun inject(activity: MainActivity)
 }
